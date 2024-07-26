@@ -16,7 +16,7 @@ search.addEventListener('click', () => {
     if (city == '')
         return;
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).then(response => response.json()).then(json => {
+    fetch(https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}).then(response => response.json()).then(json => {
 
         if (json.cod == '404') {
             cityHide.textContent = city
@@ -80,10 +80,10 @@ search.addEventListener('click', () => {
                     image.src = 'images/cloud.png';
             }
 
-            temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
-            description.innerHTML = `${json.weather[0].description}`;
-            humidity.innerHTML = `${json.main.humidity}%`;
-            wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+            temperature.innerHTML = ${parseInt(json.main.temp)}<span>°C</span>;
+            description.innerHTML = ${json.weather[0].description};
+            humidity.innerHTML = ${json.main.humidity}%;
+            wind.innerHTML = ${parseInt(json.wind.speed)}Km/h;
 
             const infoWeather = document.querySelector('.info-weather');
             const infoHumidity = document.querySelector('.info-humidity');
@@ -138,4 +138,3 @@ search.addEventListener('click', () => {
 
     });
 })
-
